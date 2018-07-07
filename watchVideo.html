@@ -13,7 +13,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/publish-Style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/video-js.css" rel="stylesheet">
+<!-- <link href="css/video-js.css" rel="stylesheet"> -->
+
 <!-- js -->
 <script src="js/jquery.min.js"></script>
 <!-- <script src="js/video.min.js"></script> 
@@ -41,6 +42,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script>
  new WOW().init();
 </script>
+
+<link rel="stylesheet" href="dist/plyr.css">
+<script src="dist/plyr.js"></script>
 <!-- //animation-effect -->
 </head>
 	
@@ -156,23 +160,194 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active"><a href="services.html">Services</a></li>
+				<li class="active"><a href="videos.html">Videos</a></li>
 				<li class="active">av0001</li>
 			</ol>
 		</div>
 	</div>
 <!-- //breadcrumbs -->
 <!-- watch video -->
-	<div class="watch-video-panel">
-<!--		<div class="container">-->
-			<video id="my-video" controls preload="auto" width="740" height="400"
-			poster="m.png" data-setup="{}">
-			<source src="E:/02.mp4" type="video/mp4">
-				<p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a> </p>
-			</video>
-<!--		</div>-->
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="watch-video-head head-font animated wow zoomIn" data-wow-delay=".5s">
+				<h3>视频标题</h3>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="watch-video-panel">
+				<video poster="vs.png" controls>
+				<source src="E:/02.mp4" type="video/mp4">
+		  		<!-- <source src="path/to/video.webm" type="video/webm">-->
+		  		<!-- Captions are optional -->
+				</video>
+				<script>plyr.setup();</script>
+				<div class="row">
+					<div class="col-md-6 sub-descrip-left">
+						<span class="sub-descrip-none small-message image-fade-out"><a title="播放量"><span class="icon glyphicon glyphicon-expand" aria-hidden="true"></span>30</a></span>
+						<span class="sub-descrip-none small-message image-fade-out"><a title="评论量"><span class="icon glyphicon glyphicon-comment" aria-hidden="true"></span>5</a></span>
+						<span class="sub-descrip-none small-message image-fade-out"><a title="喜欢"><span class="icon glyphicon glyphicon-heart" aria-hidden="true"></span>20</a></span>
+						<span class="sub-descrip-none small-message image-fade-out"><a title="时间"><span class="icon glyphicon glyphicon-time" aria-hidden="true"></span>2018-7-8</a></span>				<!-- <span class="small-message">2018-7-7</span> -->
+					</div>
+					<div class="col-md-4 col-md-offset-2">
+						<span class="sub-descrip-float-right sub-descrip-click small-message image-fade-out"><a><span class="icon glyphicon glyphicon-heart-empty" aria-hidden="true"></span>喜欢吗？</a></span>
+					</div>
+				</div>
+			</div>
+			</div>
+
+		</div>
 	</div>
 <!-- //watcj video -->
+<!-- tabs -->
+	<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<ul id="myTab" class="nav nav-tabs nav-justified" role="tablist">
+					<!-- description tab -->
+					<li role="presentation" class="active"><a href="#video-description" id="video-description-tab" role="tab" data-toggle="tab" aria-controls="description" aria-expanded="true">视频简介</a></li>
+					<!-- comments tab -->
+					<li role="presentation"><a href="#video-comments" role="tab" id="video-comments-tab" data-toggle="tab" aria-controls="comments">评论</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="watchVideo-TabContent" class="tab-content">
+		<!-- services panel -->
+		<div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="video-description" aria-labelledby="video-description-tab">
+			<!-- <div class="new-collections"> -->
+			<div class="row">
+				<div class="descrip-panel col-md-6 col-md-offset-3">
+					<h5 class="service-center">Product Brief Description</h5>
+					<div class="sub-descrip-click sub-descrip-left">
+						<img src="images/4.png" alt=" " class="img-responsive" />
+						<span class="small-message image-fade-out"><a>用户名</a></span>
+						<!-- <span class="small-message">2018-7-7</span> -->
+					</div>
+					<div>
+						<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+						<span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</span>
+						</p>
+					</div>
+					<div class="sub-descrip-right">
+						<span class="small-message">2018-7-7</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- services panel -->
+		<!-- comments panel -->
+		<div role="tabpanel" class="tab-pane fade" id="video-comments" aria-labelledby="video-comments-tab">
+			<!-- <div class="new-collections"> -->
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="bootstrap-tab-text-grids">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 all-textarea wtc-video-textarea">
+									<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+								</div>
+							</div>
+							<div class="row" align="center">
+									<div class="wtc-video-comment-btn all-btn image-fade-out">
+										<a href="publishService.html">发布评论</a>
+									</div>
+							</div>
+							<div class="bootstrap-tab-text-grid">
+								<div class="bootstrap-tab-text-grid-left">
+									<img src="images/4.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="bootstrap-tab-text-grid-right">
+									<ul>
+										<li><a href="#">Admin</a></li>
+										<li><a href="#" data-toggle="modal" data-target="#commentModal"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
+									</ul>
+									<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
+										suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
+										vel eum iure reprehenderit.</p>
+									<div class="sub-descrip-right">
+										<span class="small-message">2018-7-7</span>
+									</div>
+								</div>
+								<div class="clearfix"> </div>
+								<div class="bootstrap-tab-text-grid-inner">
+									<div class="bootstrap-tab-text-grid-left">
+										<img src="images/4.png" alt=" " class="img-responsive" />
+									</div>
+									<div class="bootstrap-tab-text-grid-right">
+										<ul>
+											<li><a href="#">Admin</a></li>
+											<li><a href="#" data-toggle="modal" data-target="#commentModal"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
+										</ul>
+										<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
+											suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
+											vel eum iure reprehenderit.</p>
+										<div class="sub-descrip-right">
+											<span class="small-message">2018-7-7</span>
+										</div>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="bootstrap-tab-text-grid">
+								<div class="bootstrap-tab-text-grid-left">
+									<img src="images/4.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="bootstrap-tab-text-grid-right">
+									<ul>
+										<li><a href="#">Admin</a></li>
+										<li><a href="#" data-toggle="modal" data-target="#commentModal"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
+									</ul>
+									<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
+										suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
+										vel eum iure reprehenderit.</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="bootstrap-tab-text-grid">
+								<div class="bootstrap-tab-text-grid-left">
+									<img src="images/4.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="bootstrap-tab-text-grid-right">
+									<ul>
+										<li><a href="#">Admin</a></li>
+										<li><a href="#" data-toggle="modal" data-target="#commentModal"><span class="glyphicon glyphicon-share" aria-hidden="true"></span>Reply</a></li>
+									</ul>
+									<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 
+										suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
+										vel eum iure reprehenderit.</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+						<nav class="watch-video-numbering animated wow slideInRight" data-wow-delay=".5s">
+							<ul class="pagination paging">
+								<li>
+								    <a href="#" aria-label="Previous">
+										<span aria-hidden="true">&laquo;</span>
+								    </a>
+								</li>
+								<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li>
+								    <a href="#" aria-label="Next">
+										<span aria-hidden="true">&raquo;</span>
+								    </a>
+								</li>
+							  </ul>
+						</nav>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+		<!-- videos panel -->
+	</div>
+<!-- tabs -->
 <!-- single-related-products -->
 	<div class="single-related-products">
 		<div class="container">
@@ -180,73 +355,105 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="new-collections-grids">
 				<div class="col-md-3 new-collections-grid">
 					<div class="video-panel service-center animated wow slideInUp" data-wow-delay=".3s">
-						<div class="service-grid">
-							<div class="service-grid-image">
-								<a href="watchVideo.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
+							<div class="service-grid">
+								<div class="service-grid-image">
+									<a href="watchVideo.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
+									<div class="service-grid-image-pos">
+										<a href="watchVideo.html">观看视频</a>
+									</div>
+								</div>
+							</div>
+							<div class="video-inform">
+								<h4><a href="watchVideo.html">Casual Shoes</a></h4>
+								<p>Vel illum qui dolorem.</p>
 							</div>
 						</div>
-						<div class="video-inform">
-							<h4><a href="watchVideo.html">Casual Shoes</a></h4>
-							<p>Vel illum qui dolorem.</p>
-							<div class="video-right-btn">
-								<a href="publishVideo.html">观看视频</a>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="col-md-3 new-collections-grid">
 					<div class="video-panel service-center animated wow slideInUp" data-wow-delay=".3s">
-						<div class="service-grid">
-							<div class="service-grid-image">
-								<a href="watchVideo.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
+							<div class="service-grid">
+								<div class="service-grid-image">
+									<a href="watchVideo.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
+									<div class="service-grid-image-pos">
+										<a href="watchVideo.html">观看视频</a>
+									</div>
+								</div>
+							</div>
+							<div class="video-inform">
+								<h4><a href="watchVideo.html">Casual Shoes</a></h4>
+								<p>Vel illum qui dolorem.</p>
 							</div>
 						</div>
-						<div class="video-inform">
-							<h4><a href="watchVideo.html">Casual Shoes</a></h4>
-							<p>Vel illum qui dolorem.</p>
-							<div class="video-right-btn">
-								<a href="publishVideo.html">观看视频</a>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="col-md-3 new-collections-grid">
 					<div class="video-panel service-center animated wow slideInUp" data-wow-delay=".3s">
-						<div class="service-grid">
-							<div class="service-grid-image">
-								<a href="watchVideo.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
+							<div class="service-grid">
+								<div class="service-grid-image">
+									<a href="watchVideo.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
+									<div class="service-grid-image-pos">
+										<a href="watchVideo.html">观看视频</a>
+									</div>
+								</div>
+							</div>
+							<div class="video-inform">
+								<h4><a href="watchVideo.html">Casual Shoes</a></h4>
+								<p>Vel illum qui dolorem.</p>
 							</div>
 						</div>
-						<div class="video-inform">
-							<h4><a href="watchVideo.html">Casual Shoes</a></h4>
-							<p>Vel illum qui dolorem.</p>
-							<div class="video-right-btn">
-								<a href="publishVideo.html">观看视频</a>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="col-md-3 new-collections-grid">
 					<div class="video-panel service-center animated wow slideInUp" data-wow-delay=".3s">
-						<div class="service-grid">
-							<div class="service-grid-image">
-								<a href="watchVideo.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
+							<div class="service-grid">
+								<div class="service-grid-image">
+									<a href="watchVideo.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
+									<div class="service-grid-image-pos">
+										<a href="watchVideo.html">观看视频</a>
+									</div>
+								</div>
+							</div>
+							<div class="video-inform">
+								<h4><a href="watchVideo.html">Casual Shoes</a></h4>
+								<p>Vel illum qui dolorem.</p>
 							</div>
 						</div>
-						<div class="video-inform">
-							<h4><a href="watchVideo.html">Casual Shoes</a></h4>
-							<p>Vel illum qui dolorem.</p>
-							<div class="video-right-btn">
-								<a href="publishVideo.html">观看视频</a>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
 <!-- //single-related-products -->
+<!-- 模拟框-上传视频 -->
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					回复 <span>用户名：</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 all-textarea wtc-video-textarea">
+						<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+					</div>
+				</div>
+				<div class="row" align="center">
+						<div class="wtc-video-comment-btn all-btn image-fade-out">
+							<a href="publishService.html">发布评论</a>
+						</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<!-- //模拟框 -->
 <!-- footer -->
 	<div class="footer">
 		<div class="container">
