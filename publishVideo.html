@@ -13,8 +13,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/publish-style.css" rel="stylesheet" type="text/css" media="all" />
+<span style="font-size:14px;"><link type="text/css" rel="stylesheet" href="fileinput/css/fileinput.css" />
 <!-- js -->
 <script src="js/jquery.min.js"></script>
+<script src="js/init-filminput.js"></script>
+<script type="text/javascript" src="fileinput/js/fileinput.js"></script>
+<script type="text/javascript" src="fileinput/js/fileinput_locale_zh.js"></script></span>
+
 <!-- //js -->
 <!-- cart -->
 	<script src="js/simpleCart.min.js"> </script>
@@ -164,19 +169,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
 							<div class="publish-center animated wow slideInLeft" data-wow-delay=".5s">
-								<!-- radio的使用 -->
-								<!-- <div class="publish-radio">
-									<div class="radio">
-										<label class="checkbox"><input type="radio" name="service-type" value=""><i> </i>陪玩</label>
-									</div>
-								</div>-->
-								<img src="" width="40" height="40">
+								<span class="icon-film glyphicon glyphicon-film"></span>
 								<h6>文件名</h6>
+								<span class="icon-check glyphicon glyphicon-check"></span>
 							</div>
 							<div class="animated wow slideInLeft" data-wow-delay=".5s">
 								<div class="row animated wow slideInUp" data-wow-delay=".5s">
-									<div class="col-md-4 col-md-offset-4">
-										<input type="submit" value="上传">
+									<div class="col-md-6 col-md-offset-3">
+										<input type="submit" value="上传视频" data-toggle="modal" data-target="#myModal">
 									</div>
 								</div>
 							</div>
@@ -219,6 +219,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //register -->
+<!-- 模拟框-上传视频 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					视频上传
+				</h4>
+			</div>
+			<div class="modal-body">
+				<!-- 后台的接受名为file,要相同名字，id为初始化文件框 -->
+				<span style="font-size:14px;"><form enctype="multipart/form-data">
+				   <input id="file-video" class="file" type="file" multiple>
+				</form></span>
+				<script type="text/javascript">
+					//初始化控件initFileInput(id,uploadurl)控件id，与上传路径
+					initFileInput_video("file-video", "E:/pushMessAction");
+				</script>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<!-- //模拟框 -->
 <!-- footer -->
 	<div class="footer">
 		<div class="container">

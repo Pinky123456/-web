@@ -1,5 +1,5 @@
 /*-- login, register, publish --*/
-.all-form-grids input[type="email"],.all-form-grids input[type="password"],.all-form-grids input[type="text"], .all-form-grids input[type="confirm"]{
+.all-form-grids input[type="email"],.all-form-grids input[type="password"],.all-form-grids input[type="text"], .all-form-grids input[type="confirm"], .login-form-grids input[type="confirm"]{
 	outline: none;
     border: 1px solid #DBDBDB;
     padding: 10px 10px 10px 45px;
@@ -8,7 +8,7 @@
     display: block;
     width: 100%;
 }
-.all-form-grids input[type="confirm"]{
+.all-form-grids input[type="confirm"], .login-form-grids input[type="confirm"]{
     background:url(../images/img-sp.png) no-repeat 5px -182px #fff;
     margin:1em 0 0;
 }
@@ -50,7 +50,7 @@
 	font-size:1em;
 	color:#212121;
 	text-transform:uppercase;
-	padding:1em 0 1em;
+	padding:0 0 1em;
 	margin:1em 0 1em;
 	border-bottom: 1px solid #A9A9A9;
 }
@@ -63,7 +63,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 0 auto;
+}
+.publish-center h6{
+	margin-left: 10px;
+}
+.publish-center .icon-film{
+	font-size: 2em;
+}
+.publish-center .icon-check{
+	color: green;
+	margin-left: 2em;
 }
 .all-form-grids input[type="text"]{
 	background:url(../images/img-sp.png) no-repeat 5px -259px #fff;
@@ -79,13 +88,13 @@
 }
 .publish-form-grids{
 	/*width: 60%;*/
-	padding: 1em 3em 3em;
+	padding: 3em 3em 3em;
 	background:#F7F7F9;
 	margin:3em auto 0;
 }
 .register-grids{
 	width: 45%;
-    padding: 3em;
+    padding: 1.5em 3em 3em;
 	background:#F7F7F9;
 	margin:3em auto 0;
 }
@@ -186,7 +195,7 @@
 .service-grid-image-pos{
 	position:absolute;
 	top: 50%;
-    left: 35%;
+    left: 38%;
 	transition:.5s ease-in-out;
 	-webkit-transition:.5s ease-in-out;
 	-moz-transition:.5s ease-in-out;
@@ -194,12 +203,18 @@
 	z-index:9999;
 	display:none;
 }
+.image-fade-out a, .service-grid-image-pos a{
+	transition:.5s ease-in-out;
+	-webkit-transition:.5s ease-in-out;
+	-moz-transition:.5s ease-in-out;
+	-o-transition:.5s ease-in-out;
+}
 .service-grid-image-pos a{
 	padding:10px 20px;
 	color:#fff;
 	background:#d8703f;
 	text-decoration:none;
-	font-size: 18px;
+	font-size: 14px;
 }
 .service-grid:hover .service-grid-image-pos{
 	display:block;
@@ -218,6 +233,18 @@
 }
 .service-center{
 	text-align:center;
+}
+.hot-one{
+	position:absolute;
+	top:0%;
+	right:0%;
+	padding:.1em .5em;
+	background:#ffc229;
+}
+.hot-one p{
+	font-size:14px;
+	color:#fff;
+	margin:0;
 }
 /*-- //image --*/
 /*-- radio --*/
@@ -249,7 +276,7 @@
 	width: 80%;
 	margin: 1em auto;
 }
-select#select-service {
+#select-service {
     border: 1px solid #E4E4E4;
     outline: none;
     font-size: 14px;
@@ -258,21 +285,41 @@ select#select-service {
     width: 100%;
 	cursor: pointer;
 }
+.video-right-btn{
+	margin: 0 auto;
+	width: 80%;
+}
+.video-right-btn a{
+	display: block;
+	text-align: center;
+	outline:none;
+	padding:5px 10px;
+	font-size:15px;
+	color: #d8703f;
+	background-color: #fff;
+	border:1px solid #d8703f;
+}
+.video-right-btn a:hover{
+	color:#000;
+	border-color: #000;
+}
 .publish-service-btn{
 	float: left;
 	width:20%;
 }
 .publish-service-btn a{
+	font-size:1em;
+	padding:10px 40px;
+}
+.all-btn a{
 	display: block;
 	text-align: center;
 	outline:none;
 	border:none;
 	background:#d8703f;
-	font-size:1em;
 	color:#fff;
-	padding:10px 40px;
 }
-.publish-service-btn a:hover{
+.all-btn a:hover{
 	background:#ffc229;
 }
 /* background-white*/
@@ -296,4 +343,34 @@ select#select-service {
 }
 .head-font h3:after{
 	right:10%;
+}
+/*-- video-panel --*/
+.watch-video-panel {
+	width: 800px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+}
+/*-- video-panel --*/
+/*-- service image btn grid*/
+.service-grid1-image-pos{
+	top: 45% !important;
+	left: 25% !important;
+}
+.service-grid1-image-pos-star{
+    bottom: 35% !important;
+    left: 33% !important;
+}
+/*-- publish service image btn pos grid*/
+.pubservice-grid-image-pos a{
+	font-size: 18px !important;
+}
+.pubservice-grid-image-pos{
+	top: 48% !important;
+	left: 36% !important;
+}
+/*-- service image btn pos grid*/
+.item_price{
+	color: #000;
 }
