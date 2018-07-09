@@ -1,5 +1,5 @@
 /*-- login, register, publish --*/
-.all-form-grids input[type="email"],.all-form-grids input[type="password"],.all-form-grids input[type="text"], .all-form-grids input[type="confirm"], .login-form-grids input[type="confirm"]{
+.all-form-grids input[type="email"],.all-form-grids input[type="password"],.all-form-grids input[type="money"],.all-form-grids input[type="text"], .all-form-grids input[type="confirm"], .login-form-grids input[type="confirm"]{
 	outline: none;
     border: 1px solid #DBDBDB;
     padding: 10px 10px 10px 45px;
@@ -7,6 +7,9 @@
     color: #999;
     display: block;
     width: 100%;
+}
+.all-form-grids input[type="money"]{
+	width: 60% !important;
 }
 .all-form-grids input[type="confirm"], .login-form-grids input[type="confirm"]{
     background:url(../images/img-sp.png) no-repeat 5px -182px #fff;
@@ -235,6 +238,22 @@
 .service-center{
 	text-align:center;
 }
+.define-money{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+.define-money h6{
+	line-height: 2em;
+	padding-left: .5em;
+}
+.define-money input{
+	outline: none;
+    border: 1px solid #DBDBDB;
+    padding: 7px 15px;
+    font-size: 14px;
+    color: #212121;
+}
 .hot-one{
 	position:absolute;
 	top:0%;
@@ -339,9 +358,12 @@
 	position: absolute;
 	top:0;
 	right: 2.5em;
+	outline: none;
+	border: 1px solid #DBDBDB;
 	width:13em;
+	color: #212121;
 	font-size: 10px;
-	padding: 5px;
+	padding: 5px 15px;
 }
 .video-right-btn{
 	margin: 0 auto;
@@ -377,6 +399,17 @@
 	font-size:1em;
 	padding:10px 40px;
 }
+.confirm-done-btn{
+	position: absolute;
+	top: -5px;
+	transform: translate( 0%, -50%);
+	width:100%;
+	margin: 0 !important;
+}
+.confirm-done-btn a{
+	font-size:1em;
+	padding:5px 0;
+}
 .all-btn a{
 	display: block;
 	text-align: center;
@@ -395,9 +428,10 @@
 }
 /* background-white*/
 .head-font{
+	position: relative;
 	margin-bottom: 1.6em;
 }
-.head-font h3:before, .head-font h3:after{
+.head-font h3:before, .head-font h4:before, .head-font h3:after, .head-font h4:after{
 	position: absolute;
     top: 50%;
     width: 10%;
@@ -405,11 +439,11 @@
     background: #D5D5D5;
     content: '';
 }
-.head-font h3:before{
+.head-font h3:before, .head-font h4:before{
 	/*left:10%;*/
 	transform: translate(-150%, 0%);
 }
-.head-font h3:after{
+.head-font h3:after, .head-font h4:after{
 	/*right:10%;*/
 	transform: translate(50%, 0%);
 }

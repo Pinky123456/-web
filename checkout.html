@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Checkout</title>
+<title>我的购物车</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -73,6 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<li><a href="manageService.html">我的服务</a></li>
 												<li><a href="manageVideo.html">我的视频</a></li>
 												<li><a href="checkout.html">我的购物车</a></li>
+												<li><a href="manageOrder.html">我的订单</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-6">
@@ -177,25 +178,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="checkout">
 		<div class="container">
 			<div class="row">
-				<h3 class="animated wow slideInLeft" data-wow-delay=".5s">Your shopping cart contains: <span>3 Products</span></h3>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="watch-video-head head-font animated wow zoomIn" style="margin-top: -20px" data-wow-delay=".5s">
+						<h3>我的购物车</h3>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h3 class="checkout-info-right animated wow slideInLeft" data-wow-delay=".5s">您的购物车有 <span>3 个服务</span></h3>
 			</div>
 			<div class="row">
 				<div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
-					<table class="timetable_sub table table-striped table-hover">
+					<table class="timetable_sub table table-hover">
 						<thead>
 							<tr>
-								<th>SL No.</th>	
-								<th>Product</th>
-								<th>Quality</th>
-								<th>Product Name</th>
-								<th>Service Charges</th>
-								<th>Price</th>
-								<th>Remove</th>
+								<th>服务id</th>	
+								<th>服务标题</th>
+								<th>小时数</th>
+								<th>游戏</th>
+								<th>服务类型</th>
+								<th>价格</th>
+								<th>操作</th>
 							</tr>
 						</thead>
 						<tr class="rem1">
 							<td class="invert">1</td>
-							<td class="invert-image"><a href="single.html">服务名称1</a></td>
+							<td class="invert-image"><a href="single.html">服务标题1</a></td>
 							<td class="invert">
 								 <div class="quantity"> 
 									<div class="quantity-select">                           
@@ -205,26 +213,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</td>
-							<td class="invert">Black Shoe</td>
-							<td class="invert">$5.00</td>
-							<td class="invert">$290.00</td>
+							<td class="invert">游戏名称</td>
+							<td class="invert">陪玩</td>
+							<td class="invert">$20.00</td>
 							<td class="invert">
 								<div class="rem">
-									<div class="close1"> </div>
+									<div class="close"> </div>
 								</div>
-								<script>$(document).ready(function(c) {
-									$('.close1').on('click', function(c){
-										$('.rem1').fadeOut('slow', function(c){
-											$('.rem1').remove();
-										});
-										});	  
-									});
-							   </script>
 							</td>
 						</tr>
-						<tr class="rem2">
-							<td class="invert">2</td>
-							<td class="invert-image"><a href="single.html">服务名称2</td>
+						<tr class="rem1">
+							<td class="invert">1</td>
+							<td class="invert-image"><a href="single.html">服务标题1</a></td>
 							<td class="invert">
 								 <div class="quantity"> 
 									<div class="quantity-select">                           
@@ -234,26 +234,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</td>
-							<td class="invert">Centre Table</td>
-							<td class="invert">$5.00</td>
-							<td class="invert">$250.00</td>
+							<td class="invert">游戏名称</td>
+							<td class="invert">陪玩</td>
+							<td class="invert">$20.00</td>
 							<td class="invert">
 								<div class="rem">
-									<div class="close2"> </div>
+									<div class="close"> </div>
 								</div>
-								<script>$(document).ready(function(c) {
-									$('.close2').on('click', function(c){
-										$('.rem2').fadeOut('slow', function(c){
-											$('.rem2').remove();
-										});
-										});	  
-									});
-							   </script>
 							</td>
 						</tr>
-						<tr class="rem3">
-							<td class="invert">3</td>
-							<td class="invert-image"><a href="single.html">服务名称3</a></td>
+						<tr class="rem1">
+							<td class="invert">1</td>
+							<td class="invert-image"><a href="single.html">服务标题1</a></td>
 							<td class="invert">
 								 <div class="quantity"> 
 									<div class="quantity-select">                           
@@ -263,36 +255,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 								</div>
 							</td>
-							<td class="invert">Stone Bangles</td>
-							<td class="invert">$5.00</td>
-							<td class="invert">$299.00</td>
+							<td class="invert">游戏名称</td>
+							<td class="invert">陪玩</td>
+							<td class="invert">$20.00</td>
 							<td class="invert">
 								<div class="rem">
-									<div class="close3"> </div>
+									<div class="close"> </div>
 								</div>
-								<script>$(document).ready(function(c) {
-									$('.close3').on('click', function(c){
-										$('.rem3').fadeOut('slow', function(c){
-											$('.rem3').remove();
-										});
-										});	  
-									});
-							   </script>
 							</td>
 						</tr>
-									<!--quantity-->
-										<script>
-										$('.value-plus').on('click', function(){
-											var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
-											divUpd.text(newVal);
-										});
+						<!--quantity-->
+						<script>
+							$('.value-plus').on('click', function(){
+								var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+								divUpd.text(newVal);
+							});
 
-										$('.value-minus').on('click', function(){
-											var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
-											if(newVal>=1) divUpd.text(newVal);
-										});
-										</script>
-									<!--quantity-->
+							$('.value-minus').on('click', function(){
+								var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+								if(newVal>=1) divUpd.text(newVal);
+							});
+							$(document).ready(function(c) {
+								$('.close').on('click', function(c){
+									$(this).parent().parent().fadeOut('slow', function(c){
+										$(this).parent().remove();
+									});
+								});
+							});
+						</script>
+						<!--quantity-->
 					</table>
 				</div>
 			</div>
@@ -300,11 +291,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
 					<h4>Continue to basket</h4>
 					<ul>
-						<li>Product1 <i>-</i> <span>$250.00 </span></li>
-						<li>Product2 <i>-</i> <span>$290.00 </span></li>
-						<li>Product3 <i>-</i> <span>$299.00 </span></li>
-						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>
-						<li>Total <i>-</i> <span>$854.00</span></li>
+						<li>Product1 <i>-</i> <span>$20.00 </span></li>
+						<li>Product2 <i>-</i> <span>$20.00 </span></li>
+						<li>Product3 <i>-</i> <span>$29.00 </span></li>
+						<li class="total-money">Total <i>-</i> <span>$69.00</span></li>
 					</ul>
 				</div>
 				<div class="row">
@@ -323,7 +313,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="row">
 					<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
-						<a href="single.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
+						<a href="single.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>继续浏览</a>
 					</div>
 				</div>
 				<div class="clearfix"> </div>

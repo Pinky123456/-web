@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>我的服务</title>
+<title>我的视频</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -169,7 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
-				<li class="active">我的服务</li>
+				<li class="active">我的视频</li>
 			</ol>
 		</div>
 	</div>
@@ -180,14 +180,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="watch-video-head head-font animated wow zoomIn" style="margin-top: -20px" data-wow-delay=".5s">
-						<h3>我的服务</h3>
+						<h3>我的视频</h3>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<h3 class="checkout-info-right animated wow slideInRight" data-wow-delay=".5s">您已发布<span>3 个服务</span></h3>
+				<h3 class="checkout-info-right animated wow slideInRight" data-wow-delay=".5s">您已投稿<span>3 个视频</span></h3>
 				<div class="publish-service-btn all-btn image-fade-out animated wow slideInLeft" data-wow-delay=".5s">
-					<a href="publishService.html">发布服务</a>
+					<a href="publishVideo.html">投稿视频</a>
 				</div>
 			</div>
 			<div class="row">
@@ -196,22 +196,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<table class="timetable_sub table table-hover">
 						<thead>
 							<tr>
-								<th>服务id</th>	
-								<th>服务标题</th>
-								<th>游戏</th>
-								<th>开通时间</th>
-								<th>接单数</th>
-								<th>定价</th>
+								<th>视频id</th>	
+								<th>视频标题</th>
+								<th>投稿时间</th>
+								<th>浏览数</th>
+								<th>评论数</th>
+								<th>排名</th>
 								<th>操作</th>
 							</tr>
 						</thead>
 						<tr class="rem1">
 							<td class="invert">1</td>
-							<td class="invert-image"><a href="single.html">服务标题1</a></td>
-							<td class="invert">游戏名称</td>
+							<td class="invert-image"><a href="watchVideo.html">视频标题1</a></td>
 							<td class="invert">2018-7-8</td>
-							<td class="invert">3</td>
-							<td class="invert">$20.00</td>
+							<td class="invert">30</td>
+							<td class="invert">5</td>
+							<td class="invert">180</td>
 							<td class="invert">
 								<div class="rem">
 									<div class="close"> </div>
@@ -219,12 +219,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</td>
 						</tr>
 						<tr class="rem1">
-							<td class="invert">2</td>
-							<td class="invert-image"><a href="single.html">服务标题2</a></td>
-							<td class="invert">游戏名称</td>
+							<td class="invert">1</td>
+							<td class="invert-image"><a href="watchVideo.html">视频标题1</a></td>
 							<td class="invert">2018-7-8</td>
-							<td class="invert">3</td>
-							<td class="invert">$20.00</td>
+							<td class="invert">30</td>
+							<td class="invert">5</td>
+							<td class="invert">180</td>
 							<td class="invert">
 								<div class="rem">
 									<div class="close"> </div>
@@ -232,12 +232,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</td>
 						</tr>
 						<tr class="rem1">
-							<td class="invert">3</td>
-							<td class="invert-image"><a href="single.html">服务标题3</a></td>
-							<td class="invert">游戏名称</td>
+							<td class="invert">1</td>
+							<td class="invert-image"><a href="watchVideo.html">视频标题1</a></td>
 							<td class="invert">2018-7-8</td>
-							<td class="invert">3</td>
-							<td class="invert">$20.00</td>
+							<td class="invert">30</td>
+							<td class="invert">5</td>
+							<td class="invert">180</td>
 							<td class="invert">
 								<div class="rem">
 									<div class="close"> </div>
@@ -246,54 +246,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</tr>
 					</table>
 					<!-- 动态删除列 -->
-					<script>
-						$(document).ready(function(c) {
-							$('.close').on('click', function(c){
-								$(this).parent().parent().fadeOut('slow', function(c){
-									$(this).parent().remove();
-								});
+					<script>$(document).ready(function(c) {
+						$('.close').on('click', function(c){
+							$(this).parent().parent().fadeOut('slow', function(c){
+								$(this).parent().remove();
+							});
 							});
 						});
 				   </script>
 				</div>
 			</div>
-			<div class="checkout-left">	
-				<div class="checkout-left-basket head-font animated wow slideInLeft" data-wow-delay=".5s">
-					<h4 style="background: none; color: #000">接单列表</h4>
-					<table class="timetable_sub table table-hover">
-						<thead>
-							<tr>
-								<th>服务id</th>	
-								<th>用户</th>
-								<th>状态</th>
-								<th>收入</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>服务1</td>
-								<td>小刀刀</td>
-								<td>未完成</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td>服务1</td>
-								<td>王丹丹</td>
-								<td>已完成</td>
-								<td>$20.00</td>
-							</tr>
-							<tr>
-								<td>服务2</td>
-								<td>王丹丹</td>
-								<td>已完成</td>
-								<td>$20.00</td>
-							</tr>
-						</tbody>
-					</table>
-					<ul>
-						<li class="total-money">总收入 <i>-</i> <span>$40.00</span></li>
-					</ul>
-				</div>
+			<div class="checkout-left">
 				<div class="row">
 					<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
 						<a href="index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>返回主页</a>

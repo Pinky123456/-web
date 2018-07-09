@@ -73,6 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<li><a href="manageService.html">我的服务</a></li>
 												<li><a href="manageVideo.html">我的视频</a></li>
 												<li><a href="checkout.html">我的购物车</a></li>
+												<li><a href="manageOrder.html">我的订单</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-6">
@@ -211,6 +212,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</div>
 							<div class="animated wow slideInLeft" data-wow-delay=".5s">
+								<h5 class="animated wow slideInLeft" data-wow-delay=".5s">自定义价格</h5>
+								<form class="define-money animated wow slideInLeft" data-wow-delay=".5s">
+									<input placeholder="自定义价格" maxlength="3" required=" " >
+									<h6>/小时</h6>
+								</form>
+							</div>
+							<div class="animated wow slideInLeft" data-wow-delay=".5s">
 								<h5>自定义服务类型</h5>
 								<div class="define-service-add">
 									<input id="define-service-input" placeholder="自定义类型（十字以内）" maxlength="10" required=" " >
@@ -229,21 +237,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										var define_text = $("#define-service-input").val();
 										if(define_text != ''){
 											var define_service = '<a >'+define_text
-												          +'<span id="'+ define_service_id +'"onclick="remove_service(this)" class="define-service-remove-icon glyphicon glyphicon-remove-sign"></span></a>'
+												          +'<span id="'+ define_service_id +'"onclick="remove_service(this)" class="define-service-remove-icon glyphicon glyphicon-remove-sign"></span></a>';
 										    $("#define-service-panel").append(define_service);
 											$("#define-service-input").val('')
 											$("#add-success").fadeIn(500).delay(500).fadeOut(500);
 										}
 									});
 								});
+
 								function remove_service(obj){
 									var id = $(obj).attr("id");
-									$("#"+id+"").parent().remove();
+									$("#"+id+"").parent().fadeOut('slow', function(c){
+										$(this).remove();
+									});
 								}
 							</script>
 						</div>
 					</div>
-					<h5 class="animated wow slideInLeft" data-wow-delay=".5s">资格认证</h5>
+					<h5 class="animated wow slideInRight" data-wow-delay=".5s">资格认证</h5>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
 							<div class="service-grid animated wow slideInRight" data-wow-delay=".5s">
@@ -258,17 +269,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<h5 class="animated wow slideInLeft" data-wow-delay=".5s">请选择你的段位</h5>
-							<div class="animated wow slideInRight" data-wow-delay=".5s">
-								<div class="select-center">
-									<select id="select-service" onchange="change_country(this.value)" class="frm-field required sect">
-										<option value="null">英雄联盟</option>
-										<option value="null">绝地求生</option>							
-										<option value="null">刺激战场</option>							
-									</select>
-								</div>
-							</div>
-							<h5 class="animated wow slideInLeft" data-wow-delay=".5s">请简单描述你的技术</h5>
+							<h5 class="animated wow slideInRight" data-wow-delay=".5s">请简单描述你的技术</h5>
 							<form class="animated wow slideInRight" data-wow-delay=".5s">
 								<input type="email" placeholder="描述你的段位" required=" " >
 							</form>
@@ -277,7 +278,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h5 class="animated wow slideInLeft" data-wow-delay=".5s">服务宣传图片</h5>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<div class="service-grid animated wow slideInRight" data-wow-delay=".5s">
+							<div class="service-grid animated wow slideInLeft" data-wow-delay=".5s">
 								<div class="service-grid-image">
 									<a href="single.html" class="service-image"><img src="images/8.jpg" alt=" " class="img-responsive" /></a>
 									<div class="service-grid-image-pos">
@@ -296,7 +297,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h5 class="animated wow slideInLeft" data-wow-delay=".5s">服务介绍</h5>
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 all-textarea publish-textarea animated wow slideInLeft" data-wow-delay=".5s">
-							<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
+							<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>请填写服务的介绍...</textarea>
 						</div>
 					</div>
 					<!-- 提交按钮 -->
