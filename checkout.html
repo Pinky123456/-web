@@ -12,6 +12,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/publish-style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
 <script src="js/jquery.min.js"></script>
 <!-- //js -->
@@ -55,34 +56,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Home</a></li>	
+							<li><a href="index.html">主页</a></li>	
 							<!-- Mega Menu -->
-							<li><a href="services.html">Services</a></li>
+							<li><a href="services.html">服务</a></li>
 							<!-- Videos -->
-							<li class="active"><a href="" class="act">Videos</a></li>
+							<li><a href="videos.html">视频</a></li>
 							<!-- 个人中心 -->
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<b class="caret"></b></a>
+							<li class="active dropdown">
+								<a href="#" class="dropdown-toggle act" data-toggle="dropdown">个人中心<b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-2" role="menu">
 									<div class="row">
 										<!-- 管理中心 -->
 										<div class="col-sm-6">
 											<ul class="multi-column-dropdown">
-												<h6>Management</h6>
-												<li><a href="products.html">Service Management</a></li>
-												<li><a href="products.html">Video Management</a></li>
-												<li><a href="products.html">Shopping Cart</a></li>
-												<li><a href="products.html">Accessories</a></li>
+												<h6>管理中心</h6>
+												<li><a href="manageService.html">我的服务</a></li>
+												<li><a href="manageVideo.html">我的视频</a></li>
+												<li><a href="checkout.html">我的购物车</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-6">
 											<ul class="multi-column-dropdown">
-												<h6>Message</h6>
-												<li><a href="products.html">System Imform</a></li>
-												<li><a href="products.html">Wallets</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
+												<h6>消息中心</h6>
+												<li><a href="products.html">系统消息</a></li>
+												<li><a href="products.html">我的消息</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -90,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</ul>
 							</li>
 							<!-- mail us -->
-							<li><a href="mail.html">Mail Us</a></li>
+							<li><a href="mail.html">联系我们</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -113,27 +110,53 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</script>
 						<!-- //search-scripts -->
 				</div>
-				<div class="header-right">
-					<div class="cart box_1 animated wow slideInRight">
+				<div id="header-right" class="header-right">
+					<div id="log-reg" class="cart box_1 animated wow slideInRight" style="display: none">
 						<ul class="login_regist_ul">
 							<li class="login_li">
-								<a href="login.html" style="text-align: right;">Login</a>
+								<a href="login.html" style="text-align: right;">登录</a>
 							</li>
 							<li>
-								<a href="register.html" style="text-align: right;">Register</a>
+								<a href="register.html" style="text-align: right;">注册</a>
 							</li>
 						</ul>
 					</div>
-					<!-- <div class="cart box_1">
-						<a href="checkout.html">
-							<h3> <div class="total">
-								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-								<img src="images/bag.png" alt="" />
-							</h3>
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-						<div class="clearfix"> </div>
-					</div>	 -->
+					<div id="cart" class="col-md-6 col-md-offset-6" style="display: none">
+						<div class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<img src="images/4.png" width="50" height="50" style="border-radius: 50%" lt="Avatar">
+							</a>
+						    <div class="dropdown-menu dropdown-menu-right multi-column columns-1">
+								<ul class="multi-column-dropdown dropdown_menuitem_right">
+									<h6>用户名</h6>
+									<div class="cart box_1 mycart">
+										<a href="checkout.html"><h3> 
+											<div class="total">
+											<span id="simpleCart_total" class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> 个服务)
+											</div>
+											<img src="images/bag.png" alt="" />
+										</h3></a>
+										<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
+										<div class="clearfix"> </div>
+									</div>
+								</ul>
+						    </div>
+						</div>
+					</div>
+					<!-- 判断是否已登录 -->
+					<script type="text/javascript">
+						var login = true;
+						$(document).ready(function(){
+					  		if(login){
+						        $("#log-reg").hide();
+					  			$("#cart").show();
+					  		}
+					  		else{
+					  			$("#cart").hide();
+					  			$("#log-reg").show();
+					  		}
+						});
+					</script>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -144,8 +167,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Checkout Page</li>
+				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
+				<li class="active">我的购物车</li>
 			</ol>
 		</div>
 	</div>
@@ -153,121 +176,125 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- checkout -->
 	<div class="checkout">
 		<div class="container">
-			<h3 class="animated wow slideInLeft" data-wow-delay=".5s">Your shopping cart contains: <span>3 Products</span></h3>
-			<div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
-				<table class="timetable_sub">
-					<thead>
-						<tr>
-							<th>SL No.</th>	
-							<th>Product</th>
-							<th>Quality</th>
-							<th>Product Name</th>
-							<th>Service Charges</th>
-							<th>Price</th>
-							<th>Remove</th>
+			<div class="row">
+				<h3 class="animated wow slideInLeft" data-wow-delay=".5s">Your shopping cart contains: <span>3 Products</span></h3>
+			</div>
+			<div class="row">
+				<div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
+					<table class="timetable_sub table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>SL No.</th>	
+								<th>Product</th>
+								<th>Quality</th>
+								<th>Product Name</th>
+								<th>Service Charges</th>
+								<th>Price</th>
+								<th>Remove</th>
+							</tr>
+						</thead>
+						<tr class="rem1">
+							<td class="invert">1</td>
+							<td class="invert-image"><a href="single.html">服务名称1</a></td>
+							<td class="invert">
+								 <div class="quantity"> 
+									<div class="quantity-select">                           
+										<div class="entry value-minus">&nbsp;</div>
+										<div class="entry value"><span>1</span></div>
+										<div class="entry value-plus active">&nbsp;</div>
+									</div>
+								</div>
+							</td>
+							<td class="invert">Black Shoe</td>
+							<td class="invert">$5.00</td>
+							<td class="invert">$290.00</td>
+							<td class="invert">
+								<div class="rem">
+									<div class="close1"> </div>
+								</div>
+								<script>$(document).ready(function(c) {
+									$('.close1').on('click', function(c){
+										$('.rem1').fadeOut('slow', function(c){
+											$('.rem1').remove();
+										});
+										});	  
+									});
+							   </script>
+							</td>
 						</tr>
-					</thead>
-					<tr class="rem1">
-						<td class="invert">1</td>
-						<td class="invert-image"><a href="single.html"><img src="images/22.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
+						<tr class="rem2">
+							<td class="invert">2</td>
+							<td class="invert-image"><a href="single.html">服务名称2</td>
+							<td class="invert">
+								 <div class="quantity"> 
+									<div class="quantity-select">                           
+										<div class="entry value-minus">&nbsp;</div>
+										<div class="entry value"><span>1</span></div>
+										<div class="entry value-plus active">&nbsp;</div>
+									</div>
 								</div>
-							</div>
-						</td>
-						<td class="invert">Black Shoe</td>
-						<td class="invert">$5.00</td>
-						<td class="invert">$290.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close1"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close1').on('click', function(c){
-									$('.rem1').fadeOut('slow', function(c){
-										$('.rem1').remove();
-									});
-									});	  
-								});
-						   </script>
-						</td>
-					</tr>
-					<tr class="rem2">
-						<td class="invert">2</td>
-						<td class="invert-image"><a href="single.html"><img src="images/30.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
+							</td>
+							<td class="invert">Centre Table</td>
+							<td class="invert">$5.00</td>
+							<td class="invert">$250.00</td>
+							<td class="invert">
+								<div class="rem">
+									<div class="close2"> </div>
 								</div>
-							</div>
-						</td>
-						<td class="invert">Centre Table</td>
-						<td class="invert">$5.00</td>
-						<td class="invert">$250.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close2"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close2').on('click', function(c){
-									$('.rem2').fadeOut('slow', function(c){
-										$('.rem2').remove();
+								<script>$(document).ready(function(c) {
+									$('.close2').on('click', function(c){
+										$('.rem2').fadeOut('slow', function(c){
+											$('.rem2').remove();
+										});
+										});	  
 									});
-									});	  
-								});
-						   </script>
-						</td>
-					</tr>
-					<tr class="rem3">
-						<td class="invert">3</td>
-						<td class="invert-image"><a href="single.html"><img src="images/11.jpg" alt=" " class="img-responsive" /></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
+							   </script>
+							</td>
+						</tr>
+						<tr class="rem3">
+							<td class="invert">3</td>
+							<td class="invert-image"><a href="single.html">服务名称3</a></td>
+							<td class="invert">
+								 <div class="quantity"> 
+									<div class="quantity-select">                           
+										<div class="entry value-minus">&nbsp;</div>
+										<div class="entry value"><span>1</span></div>
+										<div class="entry value-plus active">&nbsp;</div>
+									</div>
 								</div>
-							</div>
-						</td>
-						<td class="invert">Stone Bangles</td>
-						<td class="invert">$5.00</td>
-						<td class="invert">$299.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close3"> </div>
-							</div>
-							<script>$(document).ready(function(c) {
-								$('.close3').on('click', function(c){
-									$('.rem3').fadeOut('slow', function(c){
-										$('.rem3').remove();
+							</td>
+							<td class="invert">Stone Bangles</td>
+							<td class="invert">$5.00</td>
+							<td class="invert">$299.00</td>
+							<td class="invert">
+								<div class="rem">
+									<div class="close3"> </div>
+								</div>
+								<script>$(document).ready(function(c) {
+									$('.close3').on('click', function(c){
+										$('.rem3').fadeOut('slow', function(c){
+											$('.rem3').remove();
+										});
+										});	  
 									});
-									});	  
-								});
-						   </script>
-						</td>
-					</tr>
-								<!--quantity-->
-									<script>
-									$('.value-plus').on('click', function(){
-										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
-										divUpd.text(newVal);
-									});
+							   </script>
+							</td>
+						</tr>
+									<!--quantity-->
+										<script>
+										$('.value-plus').on('click', function(){
+											var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+											divUpd.text(newVal);
+										});
 
-									$('.value-minus').on('click', function(){
-										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
-										if(newVal>=1) divUpd.text(newVal);
-									});
-									</script>
-								<!--quantity-->
-				</table>
+										$('.value-minus').on('click', function(){
+											var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+											if(newVal>=1) divUpd.text(newVal);
+										});
+										</script>
+									<!--quantity-->
+					</table>
+				</div>
 			</div>
 			<div class="checkout-left">	
 				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
@@ -283,6 +310,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="row">
 					<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
 						<a href="single.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>立即支付</a>
+						<script>
+						// Can also be used with $(document).ready()
+						$(window).load(function() {
+						  $('.flexslider').flexslider({
+							animation: "slide",
+							controlNav: "thumbnails"
+						  });
+						});
+						</script>
 					</div>
 				</div>
 				<div class="row">

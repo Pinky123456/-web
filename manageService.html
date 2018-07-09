@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Publish Service</title>
+<title>我的服务</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,7 +26,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <!-- animation-effect -->
-<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet"> 
 <script src="js/wow.min.js"></script>
 <script>
  new WOW().init();
@@ -58,12 +58,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav navbar-nav">
 							<li><a href="index.html">主页</a></li>	
 							<!-- Mega Menu -->
-							<li class="active"><a href="services.html" class="act">服务</a></li>
+							<li><a href="services.html">服务</a></li>
 							<!-- Videos -->
 							<li><a href="videos.html">视频</a></li>
 							<!-- 个人中心 -->
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<b class="caret"></b></a>
+							<li class="active dropdown">
+								<a href="#" class="dropdown-toggle act" data-toggle="dropdown">个人中心<b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-2" role="menu">
 									<div class="row">
 										<!-- 管理中心 -->
@@ -168,151 +168,136 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
-				<li class="active"><a href="services.html">服务</a></li>
-				<li class="active">发布服务</li>
+				<li class="active">我的服务</li>
 			</ol>
 		</div>
 	</div>
 <!-- //breadcrumbs -->
-<!-- register -->
-	<div class="publish-service">
+<!-- checkout -->
+	<div class="checkout">
 		<div class="container">
-			<h3 class="animated wow zoomIn" data-wow-delay=".5s">发布服务</h3>
-			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-8 all-form-grids publish-form-grids">
-					<h5 class="animated wow slideInLeft" data-wow-delay=".5s">设置服务</h5>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="animated wow slideInLeft" data-wow-delay=".5s">
-								<!-- radio的使用 -->
-								<!-- <div class="publish-radio">
-									<div class="radio">
-										<label class="checkbox"><input type="radio" name="service-type" value=""><i> </i>陪玩</label>
-									</div>
-								</div>-->
-								<h5>服务类型</h5>
-								<div class="select-center">
-									<select id="select-service" onchange="change_country(this.value)" class="frm-field required sect">
-										<option value="null">陪玩</option>
-										<option value="null">代玩</option>					
-									</select>
+				<h3 class="animated wow slideInLeft" data-wow-delay=".5s">Your shopping cart contains: <span>3 Products</span></h3>
+				<div class="publish-service-btn all-btn image-fade-out">
+					<a href="publishService.html">发布服务</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
+					<!--<table class="timetable_sub">-->
+					<table class="timetable_sub table table-hover table-striped">
+						<thead>
+							<tr>
+								<th>服务id</th>	
+								<th>服务标题</th>
+								<th>游戏</th>
+								<th>开通时间</th>
+								<th>接单数</th>
+								<th>金额</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tr class="rem1">
+							<td class="invert">1</td>
+							<td class="invert-image"><a href="single.html">服务标题1</a></td>
+							<td class="invert">游戏名称</td>
+							<td class="invert">2018-7-8</td>
+							<td class="invert">3</td>
+							<td class="invert">$20.00</td>
+							<td class="invert">
+								<div class="rem">
+									<div class="close1"> </div>
 								</div>
-							</div>
-							<div class="animated wow slideInLeft" data-wow-delay=".5s">
-								<h5>游戏</h5>
-								<div class="select-center">
-									<select id="select-service" onchange="change_country(this.value)" class="frm-field required sect">
-										<option value="null">英雄联盟</option>
-										<option value="null">绝地求生</option>							
-										<option value="null">刺激战场</option>							
-									</select>
-								</div>
-							</div>
-							<div class="animated wow slideInLeft" data-wow-delay=".5s">
-								<h5>自定义服务类型</h5>
-								<div class="define-service-add">
-									<input id="define-service-input" placeholder="自定义类型（十字以内）" maxlength="10" required=" " >
-									<a id="define-service-add-btn" class="define-service-add-btn" title="添加新类型"><span class="define-service-add-icon glyphicon glyphicon-plus-sign"></span></a>
-								</div>
-								<div id="add-success" align="center" class="alert alert-success define-alert" role="alert">添加成功！</div>
-								<div id="define-service-panel" class="define-service-left">
-								</div>
-							</div>
-                            <!-- 动态添加删除 -->
-							<script>
-								$(document).ready(function(){
-									var define_service_num = 0;
-									$("#define-service-add-btn").click(function(){
-										var define_service_id = 'sev-id'+define_service_num++;
-										var define_text = $("#define-service-input").val();
-										if(define_text != ''){
-											var define_service = '<a >'+define_text
-												          +'<span id="'+ define_service_id +'"onclick="remove_service(this)" class="define-service-remove-icon glyphicon glyphicon-remove-sign"></span></a>'
-										    $("#define-service-panel").append(define_service);
-											$("#define-service-input").val('')
-											$("#add-success").fadeIn(500).delay(500).fadeOut(500);
-										}
+								<script>$(document).ready(function(c) {
+									$('.close1').on('click', function(c){
+										$('.rem1').fadeOut('slow', function(c){
+											$('.rem1').remove();
+										});
+										});	  
 									});
-								});
-								function remove_service(obj){
-									var id = $(obj).attr("id");
-									$("#"+id+"").parent().remove();
-								}
-							</script>
-						</div>
-					</div>
-					<h5 class="animated wow slideInLeft" data-wow-delay=".5s">资格认证</h5>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="service-grid animated wow slideInRight" data-wow-delay=".5s">
-								<div class="service-grid-image">
-									<a href="single.html" class="service-image"><img src="images/5.jpg" height="30em" alt=" " class="img-responsive" /></a>
-									<div class="service-grid-image-pos">
-										<a href="single.html">上传图片</a>
-									</div>
+							   </script>
+							</td>
+						</tr>
+						<tr class="rem2">
+							<td class="invert">2</td>
+							<td class="invert-image"><a href="single.html">服务标题2</a></td>
+							<td class="invert">游戏名称</td>
+							<td class="invert">2018-7-8</td>
+							<td class="invert">3</td>
+							<td class="invert">$20.00</td>
+							<td class="invert">
+								<div class="rem">
+									<div class="close2"> </div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<h5 class="animated wow slideInLeft" data-wow-delay=".5s">请选择你的段位</h5>
-							<div class="animated wow slideInRight" data-wow-delay=".5s">
-								<div class="select-center">
-									<select id="select-service" onchange="change_country(this.value)" class="frm-field required sect">
-										<option value="null">英雄联盟</option>
-										<option value="null">绝地求生</option>							
-										<option value="null">刺激战场</option>							
-									</select>
+								<script>$(document).ready(function(c) {
+									$('.close2').on('click', function(c){
+										$('.rem2').fadeOut('slow', function(c){
+											$('.rem2').remove();
+										});
+										});	  
+									});
+							   </script>
+							</td>
+						</tr>
+						<tr class="rem3">
+							<td class="invert">3</td>
+							<td class="invert-image"><a href="single.html">服务标题3</a></td>
+							<td class="invert">游戏名称</td>
+							<td class="invert">2018-7-8</td>
+							<td class="invert">3</td>
+							<td class="invert">$20.00</td>
+							<td class="invert">
+								<div class="rem">
+									<div class="close3"> </div>
 								</div>
-							</div>
-							<h5 class="animated wow slideInLeft" data-wow-delay=".5s">请简单描述你的技术</h5>
-							<form class="animated wow slideInRight" data-wow-delay=".5s">
-								<input type="email" placeholder="描述你的段位" required=" " >
-							</form>
-						</div>
-					</div>
-					<h5 class="animated wow slideInLeft" data-wow-delay=".5s">服务宣传图片</h5>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="service-grid animated wow slideInRight" data-wow-delay=".5s">
-								<div class="service-grid-image">
-									<a href="single.html" class="service-image"><img src="images/8.jpg" alt=" " class="img-responsive" /></a>
-									<div class="service-grid-image-pos">
-										<a href="single.html">上传图片</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- <div class="col-md-6">
-							<form class="animated wow slideInUp" data-wow-delay=".5s">
-								<input type="text" placeholder="First Name..." required=" " >
-								<input type="text" placeholder="Last Name..." required=" " >
-							</form>
-						</div> -->
-					</div>
-					<h5 class="animated wow slideInLeft" data-wow-delay=".5s">服务介绍</h5>
-					<div class="row">
-						<div class="col-md-10 col-md-offset-1 all-textarea publish-textarea animated wow slideInLeft" data-wow-delay=".5s">
-							<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
-						</div>
-					</div>
-					<!-- 提交按钮 -->
-					<div class="row animated wow slideInUp" data-wow-delay=".5s">
-						<div class="col-md-4 col-md-offset-4">
-							<input type="submit" value="Register">
-						</div>
-					</div>
-					<div class="register-home animated wow slideInUp" data-wow-delay=".5s">
-						<a href="index.html">Home</a>
+								<script>$(document).ready(function(c) {
+									$('.close3').on('click', function(c){
+										$('.rem3').fadeOut('slow', function(c){
+											$('.rem3').remove();
+										});
+										});	  
+									});
+							   </script>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="checkout-left">	
+				<div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
+					<h4>Continue to basket</h4>
+					<ul>
+						<li>Product1 <i>-</i> <span>$250.00 </span></li>
+						<li>Product2 <i>-</i> <span>$290.00 </span></li>
+						<li>Product3 <i>-</i> <span>$299.00 </span></li>
+						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>
+						<li>Total <i>-</i> <span>$854.00</span></li>
+					</ul>
+				</div>
+				<div class="row">
+					<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+						<a href="single.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>立即支付</a>
+						<script>
+						// Can also be used with $(document).ready()
+						$(window).load(function() {
+						  $('.flexslider').flexslider({
+							animation: "slide",
+							controlNav: "thumbnails"
+						  });
+						});
+						</script>
 					</div>
 				</div>
+				<div class="row">
+					<div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+						<a href="index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>返回主页</a>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
-<!-- //register -->
+<!-- //checkout -->
 <!-- footer -->
 	<div class="footer">
 		<div class="container">

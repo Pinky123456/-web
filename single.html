@@ -56,11 +56,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Home</a></li>	
+							<li><a href="index.html">主页</a></li>	
 							<!-- Mega Menu -->
-							<li><a href="services.html">Services</a></li>
+							<li class="active"><a href="services.html" class="act">服务</a></li>
 							<!-- Videos -->
-							<li class="active"><a href="" class="act">Videos</a></li>
+							<li><a href="videos.html">视频</a></li>
 							<!-- 个人中心 -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<b class="caret"></b></a>
@@ -69,21 +69,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<!-- 管理中心 -->
 										<div class="col-sm-6">
 											<ul class="multi-column-dropdown">
-												<h6>Management</h6>
-												<li><a href="products.html">Service Management</a></li>
-												<li><a href="products.html">Video Management</a></li>
-												<li><a href="products.html">Shopping Cart</a></li>
-												<li><a href="products.html">Accessories</a></li>
+												<h6>管理中心</h6>
+												<li><a href="manageService.html">我的服务</a></li>
+												<li><a href="manageVideo.html">我的视频</a></li>
+												<li><a href="checkout.html">我的购物车</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-6">
 											<ul class="multi-column-dropdown">
-												<h6>Message</h6>
-												<li><a href="products.html">System Imform</a></li>
-												<li><a href="products.html">Wallets</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
+												<h6>消息中心</h6>
+												<li><a href="products.html">系统消息</a></li>
+												<li><a href="products.html">我的消息</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -91,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</ul>
 							</li>
 							<!-- mail us -->
-							<li><a href="mail.html">Mail Us</a></li>
+							<li><a href="mail.html">联系我们</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -114,27 +110,53 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</script>
 						<!-- //search-scripts -->
 				</div>
-				<div class="header-right">
-					<div class="cart box_1 animated wow slideInRight">
+				<div id="header-right" class="header-right">
+					<div id="log-reg" class="cart box_1 animated wow slideInRight" style="display: none">
 						<ul class="login_regist_ul">
 							<li class="login_li">
-								<a href="login.html" style="text-align: right;">Login</a>
+								<a href="login.html" style="text-align: right;">登录</a>
 							</li>
 							<li>
-								<a href="register.html" style="text-align: right;">Register</a>
+								<a href="register.html" style="text-align: right;">注册</a>
 							</li>
 						</ul>
 					</div>
-					<!-- <div class="cart box_1">
-						<a href="checkout.html">
-							<h3> <div class="total">
-								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-								<img src="images/bag.png" alt="" />
-							</h3>
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-						<div class="clearfix"> </div>
-					</div>	 -->
+					<div id="cart" class="col-md-6 col-md-offset-6" style="display: none">
+						<div class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<img src="images/4.png" width="50" height="50" style="border-radius: 50%" lt="Avatar">
+							</a>
+						    <div class="dropdown-menu dropdown-menu-right multi-column columns-1">
+								<ul class="multi-column-dropdown dropdown_menuitem_right">
+									<h6>用户名</h6>
+									<div class="cart box_1 mycart">
+										<a href="checkout.html"><h3> 
+											<div class="total">
+											<span id="simpleCart_total" class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> 个服务)
+											</div>
+											<img src="images/bag.png" alt="" />
+										</h3></a>
+										<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
+										<div class="clearfix"> </div>
+									</div>
+								</ul>
+						    </div>
+						</div>
+					</div>
+					<!-- 判断是否已登录 -->
+					<script type="text/javascript">
+						var login = true;
+						$(document).ready(function(){
+					  		if(login){
+						        $("#log-reg").hide();
+					  			$("#cart").show();
+					  		}
+					  		else{
+					  			$("#cart").hide();
+					  			$("#log-reg").show();
+					  		}
+						});
+					</script>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -145,8 +167,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Single Page</li>
+				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
+				<li><a href="services.html">服务</a></li>
+				<li class="active">service0001</li>
 			</ol>
 		</div>
 	</div>
@@ -240,61 +263,71 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-7 single-right-left simpleCart_shelfItem animated wow slideInRight" data-wow-delay=".5s">
 					<h3>Men's Solid Casual Shirt</h3>
 					<h4><span class="item_price">$550</span> - $900</h4>
-					<div class="rating1">
-						<span class="starRating">
-							<input id="rating5" type="radio" name="rating" value="5">
-							<label for="rating5">5</label>
-							<input id="rating4" type="radio" name="rating" value="4">
-							<label for="rating4">4</label>
-							<input id="rating3" type="radio" name="rating" value="3" checked>
-							<label for="rating3">3</label>
-							<input id="rating2" type="radio" name="rating" value="2">
-							<label for="rating2">2</label>
-							<input id="rating1" type="radio" name="rating" value="1">
-							<label for="rating1">1</label>
-						</span>
+					<div class="rating">
+						<div class="rating-left">
+							<img src="images/2.png" alt=" " class="img-responsive">
+						</div>
+						<div class="rating-left">
+							<img src="images/2.png" alt=" " class="img-responsive">
+						</div>
+						<div class="rating-left">
+							<img src="images/2.png" alt=" " class="img-responsive">
+						</div>
+						<div class="rating-left">
+							<img src="images/1.png" alt=" " class="img-responsive">
+						</div>
+						<div class="rating-left">
+							<img src="images/1.png" alt=" " class="img-responsive">
+						</div>
+						<div class="clearfix"> </div>
 					</div>
 					<div class="description">
-						<h5><i>Description</i></h5>
-						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-							eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+						<h5><i>游戏</i></h5>
+						<p>Duis aute </p>
+						<h5><i>段位</i></h5>
+						<p>Duis aute </p>
+						<h5><i>技术简述</i></h5>
+						<p>Duis aute cnlasnclajd aslcknlaksnc</p>
 					</div>
 					<div class="color-quality">
 						<div class="color-quality-left">
-							<h5>Color : </h5>
+							<!-- 颜色选择（弃） -->
+							<!-- <h5>Color : </h5>
 							<ul>
 								<li><a href="#"><span></span>Red</a></li>
 								<li><a href="#" class="brown"><span></span>Yellow</a></li>
 								<li><a href="#" class="purple"><span></span>Purple</a></li>
 								<li><a href="#" class="gray"><span></span>Violet</a></li>
-							</ul>
+							</ul> -->
+							<div class="occasional">
+								<h5>Occasion :</h5>
+								<div class="colr ert">
+									<label class="radio"><input type="radio" name="radio" checked=""><i></i>Casual Wear</label>
+								</div>
+								<div class="colr">
+									<label class="radio"><input type="radio" name="radio"><i></i>Party Wear</label>
+								</div>
+								<div class="colr">
+									<label class="radio"><input type="radio" name="radio"><i></i>Formal Wear</label>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
 						</div>
 						<div class="color-quality-right">
-							<h5>Quality :</h5>
+							<h5>小时数 :</h5>
 							<select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-								<option value="null">5 Qty</option>
-								<option value="null">6 Qty</option> 
-								<option value="null">7 Qty</option>					
-								<option value="null">10 Qty</option>								
+								<option value="null">1 小时</option>
+								<option value="null">2 小时</option> 
+								<option value="null">3 小时</option>					
+								<option value="null">4 小时</option>
+								<option value="null">5 小时</option>									
 							</select>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
-					<div class="occasional">
-						<h5>Occasion :</h5>
-						<div class="colr ert">
-							<label class="radio"><input type="radio" name="radio" checked=""><i></i>Casual Wear</label>
-						</div>
-						<div class="colr">
-							<label class="radio"><input type="radio" name="radio"><i></i>Party Wear</label>
-						</div>
-						<div class="colr">
-							<label class="radio"><input type="radio" name="radio"><i></i>Formal Wear</label>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
+					
 					<div class="occasion-cart">
-						<a class="item_add" href="#">add to cart </a>
+						<a class="item_add" href="checkout.html">add to cart </a>
 					</div>
 					<div class="social">
 						<div class="social-left">
@@ -318,7 +351,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="col-md-6 col-md-offset-3">
 								<ul id="myTab" class="nav nav-tabs nav-justified" role="tablist">
 									<!-- description tab -->
-									<li role="presentation" class="active"><a href="#service-description" id="service-description-tab" role="tab" data-toggle="tab" aria-controls="description" aria-expanded="true">服务简介</a></li>
+									<li role="presentation" class="active"><a href="#service-description" id="service-description-tab" role="tab" data-toggle="tab" aria-controls="description" aria-expanded="true">服务介绍</a></li>
 									<!-- comments tab -->
 									<li role="presentation"><a href="#service-comments" role="tab" id="service-comments-tab" data-toggle="tab" aria-controls="comments">评论</a></li>
 									<!-- <li role="presentation" class="dropdown">
@@ -360,15 +393,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="row">
 								<div class="col-md-11">
 									<div class="bootstrap-tab-text-grids">
-										<div class="row">
-											<div class="col-md-10 col-md-offset-1 all-textarea wtc-video-textarea">
-												<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-											</div>
-										</div>
-										<div class="row" align="center">
-												<div class="wtc-video-comment-btn all-btn image-fade-out">
-													<a href="publishService.html">发布评论</a>
+										<div id="service-comment-panel">
+											<div class="row" align="center">
+												<div class="col-md-10 col-md-offset-1 all-textarea wtc-video-textarea">
+													<div class="rating1">
+														<span class="starRating">
+															<input id="rating5" type="radio" name="rating" value="5" checked>
+															<label for="rating5">5</label>
+															<input id="rating4" type="radio" name="rating" value="4">
+															<label for="rating4">4</label>
+															<input id="rating3" type="radio" name="rating" value="3">
+															<label for="rating3">3</label>
+															<input id="rating2" type="radio" name="rating" value="2">
+															<label for="rating2">2</label>
+															<input id="rating1" type="radio" name="rating" value="1">
+															<label for="rating1">1</label>
+														</span>
+													</div>
+													<textarea id="service-comment-textarea" type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>Message...</textarea>
+													<div class="wtc-video-comment-btn all-btn image-fade-out">
+														<a id="service-comment-btn">发布评论</a>
+													</div>
+													<div id="comment-success" class="alert alert-success define-alert" role="alert">评论成功！</div>
+													<div id="comment-warning" class="alert alert-warning define-alert" role="alert">评论失败...</div>
+													<script type="text/javascript">
+														$(document).ready(function(){
+															var success = true;
+															$("#service-comment-btn").click(function(){
+																if(success){
+																	$("#service-comment-panel").delay(2000).hide(500);
+																	$("#comment-success").fadeIn(500).delay(1000);
+																	$("#comment-success").fadeOut(500);
+																}
+																else{
+																	$("#comment-warning").fadeIn(500).delay(1000);
+																	$("#comment-warning").fadeOut(500);
+																}
+															});
+														});
+													</script>
 												</div>
+											</div>
 										</div>
 										<div class="bootstrap-tab-text-grid">
 											<div class="bootstrap-tab-text-grid-left">
