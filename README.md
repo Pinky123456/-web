@@ -3,6 +3,7 @@ bootstrap页面
 一些截图如下：
 - index.html
 ![index page](display/index1.jpg)
+<br></br>
 ![index page](display/index2.jpg)
 
 - login.html
